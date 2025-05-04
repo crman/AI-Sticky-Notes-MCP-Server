@@ -21,7 +21,7 @@ This project is a basic implementation of an MCP (Model Context Protocol) server
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone <repository-URL>
+   git clone https://github.com/crman/AI-Sticky-Notes-MCP-Server.git
    cd AI-Sticky-Notes-MCP-Server
    ```
 
