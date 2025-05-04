@@ -1,6 +1,10 @@
 # server.py
 from mcp.server.fastmcp import FastMCP
 import os
+from datetime import datetime, timezone, timedelta
+
+IST = timezone(timedelta(hours=5, minutes=30))  # Asia/Kolkata
+
 # Create an MCP server
 mcp = FastMCP("AI Sticky Notes")
 
@@ -22,10 +26,12 @@ def add_note(message: str) -> str:
     Returns:
         str: Confirmation message.
     """
-    ensure_notes_file_exists()    
+    ensure_notes_file_exists()
+    # Get the current time in IST
+    local_now = datetime.now(IST)
     with open(NOTES_FILES, "a") as f:
-        f.write(message + "\n")
-    return f"Note added!"
+        f.write(f"{local_now} - {message}\n")
+    return "Note added!"
 
 
 @mcp.tool()
