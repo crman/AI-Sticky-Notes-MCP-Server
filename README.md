@@ -22,7 +22,7 @@ This project is a basic implementation of an MCP (Model Context Protocol) server
 1. Clone the repository:
    ```bash
    git clone <repository-URL>
-   cd Custom-MCP-Server-Noob
+   cd AI-Sticky-Notes-MCP-Server
    ```
 
 2. Create and activate a virtual environment:
